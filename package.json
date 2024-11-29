@@ -1,0 +1,15 @@
+{
+  "name": "app_cita.0.2",
+  "version": "1.0.0",
+  "main": "Reminder-App-master/App.js",  
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
