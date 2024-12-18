@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Resultados</h1>
+    </header>
+    <div id="resultados">
+        <h2>Resultados de la encuesta</h2>
+        <p>Aquí se mostrarán los resultados una vez que se haya completado la votación.</p>
+        <a href="index.html">Volver a la página principal</a>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // استرجاع التصويت المخزن في localStorage
+            var voto = localStorage.getItem('voto');
+
+            if (voto) {
+                document.getElementById('resultados').innerHTML = '<h2>Tu voto es para: ' + voto + '</h2>';
+            } else {
+                document.getElementById('resultados').innerHTML = '<p>No se ha registrado ningún voto aún.</p>';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta: ¿Quién es el mejor jugador?</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Encuesta: ¿Quién es el mejor jugador?</h1>
+    </header>
+    
+    <form id="votar-form">
+        <label for="messi">Messi</label>
+        <input type="radio" id="messi" name="jugador" value="messi">
+        <br>
+        <label for="cristiano">Cristiano</label>
+        <input type="radio" id="cristiano" name="jugador" value="cristiano">
+        <br><br>
+        <input type="button" value="Votar" onclick="guardarVoto()">
+    </form>
+
+    <script>
+        function guardarVoto() {
+            // Obtener la selección del usuario
+            const seleccionado = document.querySelector('input[name="jugador"]:checked');
+
+            // Verificar si el usuario seleccionó algo
+            if (!seleccionado) {
+                alert("Por favor, selecciona una opción.");
+                return;
+            }
+
+            // Guardar el voto en localStorage
+            localStorage.setItem('voto', seleccionado.value);
+            
+            // Redirigir a la página de resultados
+            window.location.href = 'resultados.html';
+        }
+    </script>
+</body>
+</html>
